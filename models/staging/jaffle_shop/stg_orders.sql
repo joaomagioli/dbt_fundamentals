@@ -1,4 +1,8 @@
-with orders as (
+with source as (
+    select * from {{ source('dbt_study', 'jaffle_shop_orders')}}
+),
+
+orders as (
     
     select
         id as order_id,
@@ -6,7 +10,7 @@ with orders as (
         order_date,
         status
 
-    from dbt_study.jaffle_shop_orders
+    from source
 )
 
 select * from orders

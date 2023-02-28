@@ -1,3 +1,7 @@
+with source as (
+    select * from {{source('dbt_study_2', 'stripe')}}
+)
+
 select
     id as payment_id,
     orderid as order_id,
@@ -8,4 +12,4 @@ select
     amount / 100 as amount,
     created as created_at
 
-from dbt_study_2.stripe 
+from source

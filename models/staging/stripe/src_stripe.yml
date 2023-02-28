@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: dbt_study_2
+    database: dbtlabs-379021
+    tables:
+      - name: stripe

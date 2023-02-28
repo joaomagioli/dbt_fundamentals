@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: dbt_study
+    database: dbtlabs-379021
+    tables:
+      - name: jaffle_shop
+      - name: jaffle_shop_orders

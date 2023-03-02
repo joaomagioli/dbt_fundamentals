@@ -5,4 +5,9 @@ sources:
     database: dbtlabs-379021
     tables:
       - name: jaffle_shop
+        columns:
+          - name: id
+            tests:
+             - unique
+             - not_null
       - name: jaffle_shop_orders

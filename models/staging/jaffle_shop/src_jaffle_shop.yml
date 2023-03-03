@@ -2,11 +2,14 @@ version: 2
 
 sources:
   - name: dbt_study
+    description: A clone of a Postgres application database.
     database: dbtlabs-379021
     tables:
       - name: jaffle_shop
+        description: Raw customers data.
         columns:
           - name: id
+            description: Primary key for customers.
             tests:
              - unique
              - not_null
